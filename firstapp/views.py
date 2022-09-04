@@ -38,11 +38,23 @@ def ladies(request):
 
 
 def moreinfo(request):
+
     if request.method == 'GET':
         id_py = request.GET.get('id')
-        print(id)
+        
         results = Hostels.objects.filter(id=id_py)
+
+        # dic_info = {
+        #     'infos': results
+        # }
+        
         dic_info = serializers.serialize("json", results)
-        print(results.id)
-        return HttpResponse(dic_info, content_type='application/json')
+        return JsonResponse(dic_info,safe=False)
+        # print("dic info is here\n"+dic_info)
+        # return HttpResponse(dic_info, content_type='application/json')
+        # return JsonResponse({'infos':Hostels.objects.filter(id=id_py)})
         # return render(request, 'moreinfo.html', dic_info)
+        # return render(request, 'moreinfo.html', dic_info)
+
+
+
