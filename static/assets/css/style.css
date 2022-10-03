@@ -402,8 +402,9 @@ h6 {
 #hero .hero-info h2 {
   color: #fff;
   margin-bottom: 40px;
-  font-size: 48px;
+  font-size: 7vh;
   font-weight: 700;
+  text-shadow: 0 0 6px #212529, 0 0 3px #212529;
 }
 
 #hero .hero-info h2 span {
@@ -413,7 +414,7 @@ h6 {
 
 @media (max-width: 767px) {
   #hero .hero-info h2 {
-    font-size: 34px;
+    font-size: 7vh;
     margin-bottom: 30px;
   }
 }
